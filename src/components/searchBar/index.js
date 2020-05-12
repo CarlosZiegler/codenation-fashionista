@@ -5,10 +5,11 @@ import IconMenu from '../../assets/iconMenu.svg'
 
 import './style.css'
 
-export default function SeachBar() {
+export default function SeachBar(props) {
+    const { handlerOnchange } = props
     return (
 
-        <div className="session">
+        <form className="session">
             <div className="container">
 
                 <div className="logo">
@@ -16,10 +17,10 @@ export default function SeachBar() {
                 </div>
 
                 <div className="container">
-                    <input type="text" placeholder="Search"></input>
+                    <input type="text" placeholder="Search" onChange={handlerOnchange}></input>
                 </div>
             </div>
-        </div>
+        </form>
 
     )
 }
